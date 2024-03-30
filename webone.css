@@ -1,0 +1,895 @@
+*{
+    margin: 0;
+    top: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 7000px;
+}
+
+.header-nav{
+    width: 100%;
+    height: 55px;
+    background-color: rgba(59, 45, 27 ,0.6);
+    position: fixed;
+    z-index: 9;
+
+}
+
+.nav-img{
+    
+    float: left;
+    border-radius: 50%;
+    padding: 3px;
+    padding-left: 40px;
+}
+
+.lis{
+    float: right;
+}
+
+
+.header-nav a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    display: inline-block;
+    padding-left:7px ;
+    font-size: 15px;
+}
+
+.header-nav a:hover{
+    color: bisque;
+}
+
+.header-nav a li{
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.header-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/OIP.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.header-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 23, 23 ,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-content{
+    color: white;
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
+    text-align: center;
+}
+
+.header-title{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header-p{
+    margin: 20px 0;
+    color: rgb(225, 233, 233);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.header-btn{
+    height: 50px;
+    width: 110px;
+    border-radius: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.header-btn2{
+     background-color: blue;
+     color: white;
+     margin-left: 11px;
+}
+
+.header-btn:hover{
+    opacity: 0.8;
+}
+
+.header-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.price-container{
+    width: 100%;
+    height: 100vh;
+    margin-top: 150px;
+}
+
+
+.website-container{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+}
+
+.website-header1{
+    text-align: center;
+    font-size: 45px;
+    text-decoration: underline;
+    color: rgb(31, 20, 126);
+    margin-top: 50px;
+}
+
+.website-header2{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(31, 20, 126);
+    margin-top: 30px;
+}
+
+.website-content{
+    width: 100%;
+    overflow: auto;
+    margin-top: 130px;
+    position: relative;
+}
+
+.customize{
+    float: left;
+    width: 30%;
+    background-color: rgb(234, 236, 235);
+    text-align: center;
+    padding: 14px  18px;
+    position: relative;
+    margin: 90px 10px;
+    height: 350px;
+}
+
+.customize::after{
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    transition: 2s;
+
+    background-color: rgb(100, 96, 96);
+    opacity: 0;
+}
+
+.customize:hover::after{
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+
+}
+
+.hotel-img{
+    width: 300px;
+    height: 300px;
+    margin-right: 6px;
+}
+
+/* ########################################################################################################################## */
+
+.service{
+    background-color: rgb(252, 249, 245);
+    height: 100vh;
+}
+
+.service-container{
+    width: 80%;
+    margin: auto;
+
+}
+
+.service-header{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.service-header .line {
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: royalblue;
+    margin: 0 auto 70px auto;
+}
+.service-content{
+    overflow: hidden;
+}
+
+.service-header .service-title {
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 9px;
+    margin-top: 6px;
+}
+
+.service-item {
+    width: 30%;
+    float: left;
+    margin: 11px;
+    position: relative;
+    padding: 20px;
+
+}
+
+.service-item.mg{
+    margin: 0 5%;
+}
+
+.service-item img{
+    width: 100%;
+}
+
+.service-item .lay-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+
+.service-item .lay-content{
+    opacity: 1;
+    visibility: visible;
+}
+
+.lay-content .service-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.lay-content .category{
+    color: #6195ff;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s, opacity .5s;
+    transition-delay: 0;
+}
+
+.lay-content a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s, opacity .5s;
+    transition-delay: .6s;
+}
+
+.lay-content .service-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.layer-content-title{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s, opacity .5s;
+    transition-delay: .4s;
+}
+
+.service-item:hover .layer-content-title,
+.service-item:hover .lay-content a,
+.service-item:hover .lay-content .category{
+   top:0;
+   opacity: 1;
+   visibility: visible;
+}
+
+.lay-content a i{
+    line-height: 40px;
+}
+
+/* #################################################################################################################### */
+
+.offer{
+    height: 100vh;
+}
+
+.offer-container{
+    width: 80%;
+    margin: auto;
+}
+
+.offer-header{
+    text-align: center;
+}
+
+.offer-title{
+    color: rgb(27, 25, 25);
+    font-size: 40px;
+}
+
+.offer-header .line2{
+    height: 5px;
+    width: 60px;
+    background-color: blue;
+    margin: 0 auto 70px auto;
+    display: block;
+}
+
+.offer-item{
+    width: 30%;
+    height: 250px;
+    border: 1px solid gray;
+    float: left;
+    overflow: hidden;
+    margin: 10px;
+    margin-top: 7px;
+    position: relative;
+}
+
+.offer-info .item-title{
+    font-size: 30px;
+}
+
+
+.offer-item .item-title{
+    font-size: 20px;
+    color: #050505;
+    margin: 3px 0 ;
+
+}
+
+.offer-item i{
+    line-height: 50px;
+    display: inline;
+    font-size: 48px;
+    color: rgb(135, 189, 240);
+}
+
+.offer-item .offer-info{
+    float: left;
+    margin: 24px 0 0 10px;
+}
+
+.offer-item .icon{
+    float: left;
+    margin: 24px 0 0 10px;
+}
+
+.offer-item:hover .item-title{
+    color: rgb(172, 172, 241);
+    transition: 2s;
+}
+
+.offer-item::after{
+    content: "";
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+    opacity: 0;
+
+    transition: 2s;
+    background-color: #887e7e;
+}
+   
+.offer-item:hover::after{
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+/* ##################################################################################################### */
+.choose-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #e9e6e6;
+}
+
+.choose-content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.choose-info{
+    float: left;
+    margin-top: 200px;
+}
+
+.choose-info .choose-p{
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.choose-info .choose-h{
+    font-size: 20px;
+    text-decoration: underline 3px blue;
+    margin-bottom: 50px;
+}
+
+.choose-info li{
+    list-style: none;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.choose-img{
+    float: left;
+    padding-top: 200px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.choose-img li{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #a8a8a8;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+.choose-img li:hover{
+    background-color: #6195ff;
+}
+
+/* #################################################################################################################### */
+
+.num-container{
+    position: relative;
+    height: 350px;
+    background-image: url(images/OIP7.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.num-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 74, 74, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.num-content{
+    width: 80%;
+    margin: auto;
+}
+
+.num-items{
+    padding-top: 140px;
+    
+}
+
+.num-item{
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+
+.num-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.num-item i{
+    color: #0a2a69;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.num-p{
+    color: #fff;
+}
+
+/* ########################################################################################################### */
+
+.price{
+    height: 100vh;
+}
+
+.price-container{
+    width: 80%;
+    margin: auto;
+}
+
+.price-header{
+    text-align: center;
+}
+
+.price-h{
+    color: rgb(27, 25, 25);
+    font-size: 40px;
+    margin-top: 140px;
+    margin-bottom: 30px;
+}
+
+.price-header .line4{
+    height: 5px;
+    width: 60px;
+    background-color: blue;
+    display: block;
+    margin: 0 0px 2px 500px;
+}
+
+.price-item{
+    width: 31%;
+    height: 480px;
+    float: left;
+    margin: 10px;
+    margin-top: 7px;
+    position: relative;
+    border: #887e7e solid 1px;
+}
+
+.price-item .img-h{
+    width: 300px;
+    height: 360px;
+    margin: 10px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.price-item a .btn{
+    margin-top: 0;
+    margin-left: 80px;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-radius: 8px;
+}
+
+.price-item .price-p{
+    text-align: center;
+    margin-left: 0px;
+    color: #6195ff;
+    font-size: 25px;
+}
+
+.price-item .price-p:hover{
+    color: black;
+}
+
+.price-item a .btn:hover{
+    background-color: rgba(106, 101, 129,0.5);
+}
+
+.btn{
+    border: 2px solid blue;
+    width: 150px;
+    color: blue;
+    height: 40px;
+    margin-top: 180px;
+}
+
+.price-item .img-h:hover{
+    color: #887e7e;
+}
+
+/* ########################################################################################################################### */
+
+.test{
+    position: relative;
+    height: 350px;
+    background-image: url(images/OIP7.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 100px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(180, 175, 175 ,0.5);
+    top: 0;
+    left: 0;
+}
+
+.content{
+    width: 90%;
+    margin: auto;
+}
+
+.item{
+    float: left;
+    margin-top: 100px;
+    margin-left: 90px;
+}
+
+.test-top img{
+    border-radius: 50%;
+}
+
+.test-top p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.test-top .p1{
+    color: aliceblue;
+}
+
+.test-footer{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+/* ####################################################################################################################### */
+
+.team-container{
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    margin-top: 200px;
+}
+
+.team-head{
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 80px;
+    color: #1f1d1d;
+}
+
+.team-content{
+    overflow: auto;
+    background-color: white;
+}
+
+.team-item{
+    float: left;
+    width: 30%;
+    background-color: rgb(193, 196, 195);
+    text-align: center;
+    padding: 14px  18px;
+    position: relative;
+}
+.div2{
+    margin: 0px  5%;
+}
+
+.team-img{
+    width: 95%;
+    margin: auto;
+    position: relative;
+}
+
+.team-img img{
+    width: 100%;
+}
+
+.team-icons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(5, 5, 5, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: 2s;
+}
+
+.team-item:hover .team-icons{
+    opacity: 1;
+    visibility: visible;
+}
+
+.team-icons a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: rgb(72, 172, 230);
+    margin-left: auto;
+}
+
+.team-icons a i{
+    line-height: 40px;
+    font-size: 20px;
+
+}
+
+.team-info-title{
+    padding: 10px 0px;
+    text-transform: capitalize;
+}
+
+.team-info-p{
+    color: rgb(58, 54, 54);
+    text-transform: uppercase;
+    
+}
+
+.team-item:hover .team-info-title{
+    color: white;
+}
+
+.team-item:hover .team-info-p{
+    color: blue;
+}
+
+.team-item::after{
+    position: absolute;
+    content:"";
+
+    width: 0;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(77, 74, 74);
+    opacity: 0;
+
+    transition: 2s;
+
+}
+
+.team-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* ############################################################################################################################ */
+
+.new-container{
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+.new-header{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 23px;
+    margin-bottom: 50px;
+    color: #0a2c6e;
+}
+
+.new-content{
+    position: relative;
+    
+}
+
+.new-item{
+    width: 30%;
+    float: left;
+    position: relative;
+    background-color: aliceblue;
+    margin-left: 13px;
+    text-align: center;
+}
+
+.new-item .new-img{
+    width: 100%;
+    margin-left: 23px;
+}
+
+.new-item .new-icon{
+    color: #244c9b;
+    padding: 3px;
+}
+
+.new-info h1{
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+.new-info p{
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.new-item::after{
+    width: 100%;
+    height: 0;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: 2s;
+
+    position: absolute;
+    background-color: #796e6e;
+    content: "";
+}
+
+.new-item:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* ###################################################################### */
+
+.footer{
+    height: 350px;
+    background-color: #3b3a3a;
+    margin-top: 100px;
+    padding: 60px 0;
+}
+
+.footer-content{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    
+}
+
+.footer-img{
+    margin-top: 50px;
+}
+
+.footer-i a i{
+    font-size: 30px;
+    color: #75a0f5;
+    margin: 4px;
+}
+
+.footer-p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #1b1717;
+    text-transform: uppercase;
+}
+
+.footer-i a i:hover{
+    color: rgb(4, 21, 61) ;
+}
